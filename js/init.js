@@ -21,7 +21,7 @@ function mapBuilder(boardsize) {  //64
             row: "",
             col: "",
             owner: "",
-			selected: "",
+	    selected: "",
             color: color1,
             level: "C"
         }
@@ -38,13 +38,6 @@ function mapBuilder(boardsize) {  //64
     for (i=0; i<powner; i++){
         cellarr[onepieces[i]].owner = "playerone";
     }
-	/* cellarr[51].owner = "playertwo";
-	cellarr[42].owner = "playerone";
-	cellarr[35].level = "C";
-	cellarr[46].level = "B";
-	cellarr[46].owner = "playerone";
-	cellarr[21].owner = "playertwo";
-	cellarr[37].owner = "playertwo"; */
 
     for (i=0; i<8; i++){
         for (j=i; j<64; j+=8){
@@ -64,9 +57,6 @@ function mapBuilder(boardsize) {  //64
 		ptwopieces: powner,
 		turno: owners[0]
 	}), boardcontainer);
-    //boarddiv = document.getElementById('board-container');
-	//cellels = document.getElementsByClassName("board-cell");
-
 }
 
 
@@ -108,6 +98,4 @@ Number.prototype.between = function (min, max) {
 window.onload = function() {
     console.log("LOADED")
     gridsize = 8;
-
-	//mapBuilder(Math.pow(gridsize,2));
 }
