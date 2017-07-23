@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Board Game</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+
+<body>
+
+<div id="builder-container" >
+	
+	<div id="effectboard-filter"></div>
+	<div class="effectboard-sq" id="effectsq1"></div>
+	<div class="effectboard-sq" id="effectsq2"></div>
+	<div class="effectboard-sq" id="effectsq3"></div>
+	
+	<div id="builder" > <!--  style="display: none;" -->
+
+		<div id="builder-size-section" class="builder-section">
+			<div id="builder-size-title" class="builder-section-title-container">
+				<div>Board Size:</div>
+			</div>
+			<div id="builder-size-button-container">  
+				<div class="builder-size-button">
+					<div>6</div>
+				</div>
+				<div class="builder-size-button open">
+					<div>8</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="builder-player-section" class="builder-section">
+			<div id="builder-player-title-container" class="builder-section-title-container">
+				<div>Players:</div>
+			</div>
+			<div id="builder-input-container">
+				<input id="p1input" placeholder="playerone" />
+				<input id="p2input" placeholder="playertwo" />
+			</div>
+		</div>
+
+		<div id="builder-save-section" class="builder-section">
+			<div id="builder-save-button" onclick="builderbutton()">
+				<div id="builder-save">Start</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="board-container" class="boardcontainer displaynone">
+    </div>
+
+</div>
+
+<!-- <section id="game-container">
+
+    <div id="main-container">
+
+    </div>
+
+</section> -->
+
+<script src="./js/react.min.js"></script>
+<script src="./js/react-dom.min.js"></script>
+<script src="./js/reactgame.js"></script>
+<script src="./js/init.js"></script>
+
+</body>
+</html>
