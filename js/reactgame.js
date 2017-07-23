@@ -35,14 +35,6 @@ class TheGame extends React.Component {
 		};
 	}
 
-	componentDidMount() {
-		//console.log("thegame didmount");
-		/*for (let i = 0; i < 10; i++) {
-			console.log(i + " " + this.props.boardstate[i].owner);
-		}*/
-		//console.log("playerone count: " + this.props.boardstate.length);
-	}
-
 	handleClick(i) {
 		//console.log("handleclick " + i);
 		if (!sel1) {
@@ -58,7 +50,6 @@ class TheGame extends React.Component {
 
 			var colcheck = () => {	
 				const changed = (sel1.col - this.props.boardstate[i].col);
-				//console.log("colchanged "+sel1.col + " " + this.props.boardstate[i].col);
 				const abschanged = Math.abs(changed);
 				const sign = changed > 0 ? 1 : -1;
 
@@ -76,7 +67,6 @@ class TheGame extends React.Component {
 
 			var rowcheck = () => {
 				const changed = (sel1.row - this.props.boardstate[i].row);
-				//console.log("rowchanged "+sel1.row + " " + this.props.boardstate[i].row);
 				const abschanged = Math.abs(changed);
 				const sign = changed > 0 ? 1 : -1;
 				
@@ -140,7 +130,7 @@ class TheGame extends React.Component {
 							sel1.selected = 'selected';       //add glow to new first select
 							console.log("hopagain");
 						}
-						//console.log('almost there');
+						
 						this.winnar();
 						this.setState({ 
 							boardstate: this.props.boardstate,
@@ -166,7 +156,7 @@ class TheGame extends React.Component {
 				var hc = true;			
 				var dhop = c + (r * gridsize);
 				console.log("hopped: "+dhop);
-				//USE THESE TO CHECK POTENTIALS!!!!!!!!!!!!
+				
 				if(t.props.boardstate[dhop].owner == t.props.turno[0]) { 
 					hc = false;
 					hopagain = true;
@@ -195,7 +185,7 @@ class TheGame extends React.Component {
 
 
 			function potentialcheck(t,s,i,dhop) {
-				//console.log(t,s,i,dhop);
+				
 				var hop = (co,ro,ci,ri) => ( ((co).between(-1,8)) && ((ro).between(-1,8)) && ((ci).between(-1,8)) && ((ri).between(-1,8)) ) ? [ (co + (ro * gridsize)), (ci + (ri * gridsize)) ] : false;
 
 				
@@ -203,26 +193,21 @@ class TheGame extends React.Component {
 				potentials[1] = hop(t.props.boardstate[i].col+1, t.props.boardstate[i].row-1, t.props.boardstate[i].col+2, t.props.boardstate[i].row-2)	;
 				potentials[2] = hop(t.props.boardstate[i].col-1, t.props.boardstate[i].row+1, t.props.boardstate[i].col-2, t.props.boardstate[i].row+2) ;
 				potentials[3] = hop(t.props.boardstate[i].col+1, t.props.boardstate[i].row+1, t.props.boardstate[i].col+2, t.props.boardstate[i].row+2) ;
-				/*console.log("fresh potentials: ");
-				console.log(potentials);*/
-				
+								
 				console.log(t.props.turno);
 				if (t.props.boardstate[i].level == 'C') {
 					if (t.props.turno[0] == 'playerone') { potentials[2] = false, potentials[3] = false; }
 					if (t.props.turno[0] == 'playertwo') { potentials[0] = false, potentials[1] = false; }
 				}
-				/*console.log("elim lvlC backwards moves: ");
-				console.log(potentials);*/
-
+				
 				havepotential = 0;
 				for (let j=0; j<4; j++) {
-					//console.log(j+" "+t.props.boardstate[potentials[j][1]].owner);
+					
 					if (potentials[j] && (t.props.boardstate[potentials[j][1]].owner.length > 0) ) {
 						console.log("bad hop, landing full: " + potentials[j][1] + " " + t.props.boardstate[potentials[j][1]].owner);
 						potentials[j] = false;
 					}
 					if (potentials[j] && (t.props.boardstate[potentials[j][1]].owner == '') && (t.props.boardstate[potentials[j][0]].owner == t.props.turno[0]) ) { 
-						//console.log(j+" bad hop, mine: " + potentials[j][0]);
 						potentials[j] = false;
 					}
 					if (potentials[j] && (t.props.boardstate[potentials[j][0]].owner == '') ) {
@@ -271,7 +256,7 @@ class TheGame extends React.Component {
 	}
 
 	render() {
-		//console.log("render thegame");
+		
 		return React.createElement(
 			"div",
 			null,
@@ -315,13 +300,7 @@ class TheGame extends React.Component {
 			React.createElement(
 				'div',
 				{ id: 'bottombar' },
-				null
-				/* React.createElement(
-					"div",
-					{ className: 'row'},
-					'sel1: ' + ((sel1) ? sel1.cell : '')
-				) */
-				
+				null				
 			)
 		);
 	}
