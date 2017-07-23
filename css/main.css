@@ -336,13 +336,27 @@ body {
 /*  MOBILE VIEW */
 @media screen and (max-width: 1080px) {
     
-    #board-container, #builder-container {
+	#builder-container {
+		height: 86vh;
+	}
+	
+	#board-container, #builder-container {
 		width: 80% !important;
 		margin-left: 10%;
-    }
-    .board-cell {
-        height: 7.4vw !important;
-    }
+		transform: scale(1.15);
+	}
+
+	.theboard {
+		transform: scale(1.12);
+	}
+
+	.board-cell {
+        	height: 7.4vw !important;
+	}
+	
+	#builder {
+		transform: scale(1.5);
+	}
 
 }
 
