@@ -336,26 +336,16 @@ body {
 /*  MOBILE VIEW */
 @media screen and (max-width: 1080px) {
     
-	#builder-container {
-		height: 86vh;
-	}
-	
 	#board-container, #builder-container {
-		width: 80% !important;
-		margin-left: 10%;
-		transform: scale(1.15);
+		width: 90% !important;
 	}
 
 	.theboard {
 		transform: scale(1.12);
 	}
 
-	.board-cell {
-        	height: 7.4vw !important;
-	}
-	
-	#builder {
-		transform: scale(1.5);
+    	.board-cell {
+        	height: 9.64vw !important;
 	}
 
 }
