@@ -333,19 +333,174 @@ body {
 
 
 
-/*  MOBILE VIEW */
+/* Small screen desktop view */
+
 @media screen and (max-width: 1080px) {
-    
+
+	#board-container, #builder-container {
+		width: 80% !important;
+	}
+
+	#topbar {
+		height: 130px;
+	}
+
+	#topbar #topbar-left {
+		padding: 0 3%;
+	}
+
+	#topbar #topbar-left #topbar-left-inner {
+		font-size: 32px;
+		font-family: "Myriad Pro Semibold";
+	}
+
+	#topbar #topbar-right {
+		padding: 10px 4%;
+	}
+
+	#topbar-right .row {
+		font-size: 24px;
+	}
+
+    .board-cell {
+        height: 7.53vw !important;
+	}
+
+}
+
+
+/*  MOBILE VIEW */
+
+@media screen and (max-width: 1440px) and (min-width: 1081px) and (min-height: 2560px) {
+	
+	#board-container {
+		transform: scale(1.3);
+	}
+
+	#board-container, #builder-container {
+		width: 80% !important;
+	}
+
+	#builder {
+		transform: scale(2.5);
+	}
+
+	.theboard {
+		transform: scale(1.1);
+	}
+
+	#topbar {
+		height: 160px;
+	}
+
+	#topbar #topbar-left {
+		padding: 0 4%;
+	}
+
+	#topbar #topbar-left #topbar-left-inner {
+		font-size: 44px;
+		font-family: "Myriad Pro Semibold";
+	}
+
+	#topbar #topbar-right {
+		padding: 10px 4%;
+	}
+
+	#topbar-right .row {
+		font-size: 40px;
+	}
+
+    .board-cell {
+        height: 7.4vw !important;
+	}
+
+}
+
+
+@media screen and (min-width: 721px) and (max-width: 1080px) and (min-height: 1920px) {
+		
 	#board-container, #builder-container {
 		width: 90% !important;
+	}
+
+	#builder {
+		transform: scale(2);
 	}
 
 	.theboard {
 		transform: scale(1.12);
 	}
 
-    	.board-cell {
-        	height: 9.64vw !important;
+	#topbar {
+		height: 150px;
+	}
+
+	#topbar #topbar-left {
+		padding: 0 4%;
+	}
+
+	#topbar #topbar-left #topbar-left-inner {
+		font-size: 44px;
+		font-family: "Myriad Pro Semibold";
+	}
+
+	#topbar #topbar-right {
+		padding: 10px 4%;
+	}
+
+	#topbar-right .row {
+		font-size: 36px;
+	}
+
+    .board-cell {
+        height: 9.64vw !important;
+	}
+
+}
+
+
+@media screen and (max-width: 720px) and (min-height: 1280px) {
+		
+	#board-container, #builder-container {
+		width: 90% !important;
+	}
+
+	#builder {
+		transform: scale(1.5);
+	}
+
+	.theboard {
+		transform: scale(1.12);
+	}
+
+	#topbar {
+		height: 120px;
+		margin-bottom: 90px;
+	}
+
+	#topbar #topbar-left {
+		padding: 0 4%;
+	}
+
+	#topbar #topbar-left #topbar-left-inner {
+		font-size: 40px;
+		font-family: "Myriad Pro Semibold";
+	}
+
+	#topbar #topbar-right {
+		padding: 10px 4%;
+	}
+
+	#topbar-right .row {
+		font-size: 36px;
+	}
+	
+	#bottombar {
+		height: 100px;
+	}
+
+    .board-cell {
+        height: 9.64vw !important;
 	}
 
 }
