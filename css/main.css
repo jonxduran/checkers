@@ -351,7 +351,7 @@ body {
 
 	#topbar #topbar-left #topbar-left-inner {
 		font-size: 32px;
-		font-family: "Myriad Pro Semibold";
+		font-family: "Myriad Pro Semibold",Myriad,sans-serif;
 	}
 
 	#topbar #topbar-right {
@@ -399,7 +399,7 @@ body {
 
 	#topbar #topbar-left #topbar-left-inner {
 		font-size: 44px;
-		font-family: "Myriad Pro Semibold";
+		font-family: "Myriad Pro Semibold",Myriad,sans-serif;
 	}
 
 	#topbar #topbar-right {
@@ -441,7 +441,7 @@ body {
 
 	#topbar #topbar-left #topbar-left-inner {
 		font-size: 44px;
-		font-family: "Myriad Pro Semibold";
+		font-family: "Myriad Pro Semibold",Myriad,sans-serif;
 	}
 
 	#topbar #topbar-right {
@@ -484,7 +484,7 @@ body {
 
 	#topbar #topbar-left #topbar-left-inner {
 		font-size: 40px;
-		font-family: "Myriad Pro Semibold";
+		font-family: "Myriad Pro Semibold",Myriad,sans-serif;
 	}
 
 	#topbar #topbar-right {
