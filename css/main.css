@@ -60,7 +60,7 @@ body {
 #boardrender .board-cell:nth-child(2n+49):nth-child(-n+56),
 #boardrender .board-cell:nth-child(2n+58):nth-child(-n+64) {
 	/* background-color: saddlebrown; */
-	background-color: rgb(81, 88, 97);
+	background-color: rgb(87, 109, 128);
 }
 
 .board-cell {
@@ -87,14 +87,14 @@ body {
     color: white;
 }
 .indexu.playerone.B {
-	background-color: red !important;
+	background-color: #d53b6a !important;
 }
 .indexu.playertwo {
     background-color: black;
     color: white;
 }
 .indexu.playertwo.B {
-	background-color: gray !important;
+	background-color: rgb(39, 47, 119) !important;
 }
 .indexu.selected {
 	box-shadow: 0px 0px 40px 25px #fafafa !important;
@@ -275,7 +275,7 @@ body {
 				cursor: pointer;
 			}
 			#builder-size-button-container > .builder-size-button.open {
-				background-color:#2e5476;
+				background-color: rgb(50, 83, 112);
 				color: white;
 				box-shadow: 0 0 25px -1px white;
 			}
@@ -327,6 +327,9 @@ body {
 			display: flex;
 			border-radius: 8px;
 			cursor: pointer;
+		}
+		#builder-save-button:hover {
+			background-color: #66102a;
 		}
 
 			#builder-save {
