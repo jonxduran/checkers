@@ -81,9 +81,9 @@ function builderbutton() {
 	owners[1][1] = p2;
 	
 	document.getElementById('builder').classList.add('displaynone');
-	document.getElementById('effectsq1').classList.add('displaynone');
+	/* document.getElementById('effectsq1').classList.add('displaynone');
 	document.getElementById('effectsq2').classList.add('displaynone');
-	document.getElementById('effectsq3').classList.add('displaynone');
+	document.getElementById('effectsq3').classList.add('displaynone'); */
 	document.getElementById('board-container').classList.remove('displaynone');
 	mapBuilder(Math.pow(brdsize,2));
 }
